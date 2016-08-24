@@ -1,7 +1,7 @@
 # flask-chatterbot
 
 #### A web implementation of [ChatterBot](https://github.com/gunthercox/ChatterBot) using Flask.
-
+See a [live example](http://saintdoge.pythonanywhere.com/).
 ## Local Setup:
  1. Ensure that Python, Flask, and ChatterBot are installed.
  2. Run *app.py*
@@ -13,4 +13,4 @@
   *   Returns raw response (ex: I am good).
 
 ##How do I deploy this to a web server?
-If you do not have a dedicated server, I highly recommend using [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) to host your application.
+If you do not have a dedicated server, I highly recommend using [PythonAnywhere](pythonanywhere.com/) or [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) to host your application.
