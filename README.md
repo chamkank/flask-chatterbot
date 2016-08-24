@@ -11,7 +11,7 @@ UPLOAD TO HEROKU
 
 ## Usage example:
 *   [/get/how are you?](http://localhost:5000/get/how are you?)
-  *   Browser handles spaces (/get/how%20are%20you?)
+  *   Browser handles whitespace for you ([/get/how%20are%20you?](http://localhost:5000))
   *   Returns raw response (ex: I am good).
 
 ##How do I deploy this to a web server?
