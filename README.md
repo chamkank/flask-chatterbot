@@ -1,6 +1,6 @@
 UPLOAD TO HEROKU
 
-# flask-chatterbot
+# ![flask-chatterbot](http://i.imgur.com/YqUsJs5.png)
 
 ### A web implementation of [ChatterBot](https://github.com/gunthercox/ChatterBot) using Flask.
 
