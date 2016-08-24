@@ -1,0 +1,32 @@
+body {
+    font-family: Garamond;
+}
+
+h1 {
+    color: black;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+h3 {
+    color: gray;
+    font-size: 20px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+h4 {
+    margin-bottom: 0px;
+    font-size: 22px;
+}
+
+p {
+    font-family: Georgia;
+    font-size: 18px;
+}
+
+ul {
+    font-size: 17px;
+}
