@@ -1,7 +1,7 @@
 # flask-chatterbot
 
 #### A web implementation of [ChatterBot](https://github.com/gunthercox/ChatterBot) using Flask.
-See a [__live example__](http://saintdoge.pythonanywhere.com/).
+
 ## Local Setup:
  1. Ensure that Python, Flask, and ChatterBot are installed.
  2. Run *app.py*
