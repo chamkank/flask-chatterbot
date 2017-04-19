@@ -12,5 +12,5 @@
   *   Browser handles whitespace for you ([/get/how%20are%20you?](http://localhost:5000/get/how%20are%20you?))
   *   Returns raw response (ex: I am good).
 
-##How do I deploy this to a web server?
+## How do I deploy this to a web server?
 If you do not have a dedicated server, I highly recommend using [PythonAnywhere](https://www.pythonanywhere.com/) or [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) to host your application.
