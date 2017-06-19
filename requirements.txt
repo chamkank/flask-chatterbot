@@ -1,0 +1,5 @@
+# Used by pip to install required python packages
+# Usage: pip install -r requirements.txt
+
+Flask>=0.11
+chatterbot>=0.4.6
