@@ -4,9 +4,11 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 
 app = Flask(__name__)
 
-english_bot = ChatBot("English Bot")
+english_bot = ChatBot("English Bot", storage_adapter="chatterbot.storage.SQLStorageAdapter")
+
 english_bot.set_trainer(ChatterBotCorpusTrainer)
 english_bot.train("chatterbot.corpus.english")
+
 
 @app.route("/")
 def home():
