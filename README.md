@@ -18,5 +18,7 @@ If you do not have a dedicated server, I highly recommend using [PythonAnywhere]
 *IMPORTANT:* If you are deploying on Heroku, you will have to change the database adapter from `chatterbot.storage.SQLStorageAdapter` to `chatterbot.storage.MongoDatabaseAdapter` since SQLite3 isn't supported. To do this simply change the following line:
 
 `english_bot = ChatBot("English Bot", storage_adapter="chatterbot.storage.SQLStorageAdapter")`
+
 ... to use the MongoDB adapter:
+
 `english_bot = ChatBot("English Bot", storage_adapter="chatterbot.storage.MongoDatabaseAdapter")`
