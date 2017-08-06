@@ -25,6 +25,6 @@ If you do not have a dedicated server, I highly recommend using [PythonAnywhere]
 english_bot = ChatBot("English Bot", 
                      storage_adapter = "chatterbot.storage.MongoDatabaseAdapter,
                      database = mongodb_name,
-                     database_uri = mongodb_uri")
+                     database_uri = mongodb_uri)
 ```
 ... where `mongodb_name` is the name of the database you wish to connect to and `mongodb_uri` is the URI of a remote instance of MongoDB.
