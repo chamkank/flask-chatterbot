@@ -5,12 +5,7 @@
 ## Local Setup:
  1. Ensure that Python, Flask, SQLAlchemy, and ChatterBot are installed (either manually, or run `pip install -r requirements.txt`).
  2. Run *app.py*
- 3. Base URL will be [http://localhost:5000/](http://localhost:5000/)
-
-## Usage example:
-*   [/get/how are you?](http://localhost:5000/get/how%20are%20you?)
-  *   Browser handles whitespace for you ([/get/how%20are%20you?](http://localhost:5000/get/how%20are%20you?))
-  *   Returns raw response (ex: I am good).
+ 3. Demo will be live at [http://localhost:5000/](http://localhost:5000/)
 
 ## How do I deploy this to a web server?
 If you do not have a dedicated server, I highly recommend using [PythonAnywhere](https://www.pythonanywhere.com/), [AWS](https://aws.amazon.com/getting-started/projects/deploy-python-application/) or [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) to host your application.
