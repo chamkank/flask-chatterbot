@@ -1,6 +1,6 @@
 # Used by pip to install required python packages
 # Usage: pip install -r requirements.txt
 
-Flask>=0.11
-chatterbot>=0.7.1
-SQLAlchemy>=1.1.11
+Flask>=1.0.0
+chatterbot>=1.0.0
+SQLAlchemy>=1.3
