@@ -3,4 +3,5 @@
 
 Flask>=1.0.0
 chatterbot>=1.0.0
-SQLAlchemy>=1.3
+chatterbot-corpus>=1.2.0
+SQLAlchemy>=1.2
