@@ -29,12 +29,14 @@
           });
         }
         $("#textInput").keypress(function(e) {
-            if(e.which == 13) {
+            if ((e.which == 13) && document.getElementById("textInput").value != "" ){
                 getBotResponse();
             }
         });
         $("#buttonInput").click(function() {
-          getBotResponse();
+            if (document.getElementById("textInput").value != "") {
+                getBotResponse();
+            }
         })
       </script>
     </div>
