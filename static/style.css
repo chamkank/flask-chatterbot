@@ -29,6 +29,7 @@ h3 {
     margin-right: auto;
     width: 40%;
     margin-top: 60px;
+    border-radius:30px;
 }
 
 #textInput {
@@ -43,6 +44,7 @@ h3 {
     padding: 3px;
     font-family: monospace;
     font-size: 17px;
+    border-radius:28px;
 }
 
 .userText {
