@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  </head>
-  <body>
-    <h1>Flask Chatterbot Example</h1>
-    <h3>A web implementation of <a href="https://github.com/gunthercox/ChatterBot">ChatterBot</a> using Flask.</h3>
-    <div>
-      <div id="chatbox">
-        <p class="botText"><span>Hi! I'm Chatterbot.</span></p>
-      </div>
-      <div id="userInput">
-        <input id="textInput" type="text" name="msg" placeholder="Message">
-        <input id="buttonInput" type="submit" value="Send">
-      </div>
-      <script>
-        function getBotResponse() {
-          var rawText = $("#textInput").val();
-          var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
-          $("#textInput").val("");
-          $("#chatbox").append(userHtml);
-          document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
-          $.get("/get", { msg: rawText }).done(function(data) {
-            var botHtml = '<p class="botText"><span>' + data + '</span></p>';
-            $("#chatbox").append(botHtml);
-            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
-          });
-        }
-        $("#textInput").keypress(function(e) {
-            if ((e.which == 13) && document.getElementById("textInput").value != "" ){
-                getBotResponse();
-            }
-        });
-        $("#buttonInput").click(function() {
-            if (document.getElementById("textInput").value != "") {
-                getBotResponse();
-            }
-        })
-      </script>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../static/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <h1>Flask Chatterbot Example</h1>
+  <h3>A web implementation of <a href="https://github.com/gunthercox/ChatterBot">ChatterBot</a> using Flask.</h3>
+  <div>
+    <div id="chatbox">
+      <p class="botText"><span>Hi! I'm Chatterbot.</span></p>
     </div>
-  </body>
+    <div id="userInput">
+      <input id="textInput" type="text" name="msg" placeholder="Message" autofocus />
+      <input id="buttonInput" type="submit" value="Send">
+    </div>
+    <script>
+      var textInput = document.getElementById("textInput");
+      var userInput = document.getElementById("userInput");
+      var chatbox = document.getElementById("chatbox");
+      var submit = document.getElementById("buttonInput");
+      function getBotResponse() {
+        var text = textInput.value;
+        var userHtml = '<p class="userText"><span> ' + text + '</span></p>';
+        textInput.value = "";
+        chatbox.innerHTML += userHtml;
+        userInput.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        request = {
+          "message": text
+        }
+        var options = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(request)
+        }
+        fetch("/chat", options).then(response => { return response.text() }).then(data => {
+          var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+          chatbox.innerHTML += botHtml;
+          userInput.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        });
+      }
+      textInput.onkeypress = (e) => {
+        if (e.which == 13 && textInput.value && textInput.value != "") {
+          getBotResponse();
+        }
+      };
+
+      submit.onclick = () => {
+        if (textInput.value && textInput.value != "")
+          getBotResponse();
+      };
+    </script>
+  </div>
+</body>
+
 </html>
